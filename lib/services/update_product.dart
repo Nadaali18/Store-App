@@ -8,8 +8,9 @@ class UpdateProduct {
     required String price,
     required String description,
     required String image,
+    required dynamic id,
     required String category})async{
-    Map<String,dynamic> data =await Api().put(url: 'https://fakestoreapi.com/products', 
+    Map<String,dynamic> data =await Api().put(url: 'https://fakestoreapi.com/products/$id', 
     body: {
       'title': title,
       'price': price,
